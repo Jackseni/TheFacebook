@@ -1,0 +1,64 @@
+.CommentsContainerBox {
+	width: 100%;
+	height: 270px;
+	overflow: scroll;
+}
+
+.CommentsContainer  {
+	width: 100%;
+	padding: 10px;
+	height: auto;
+	display: flex;
+	justify-content: center
+}
+
+.CommentsBox {
+	width: 90%;
+	height: 40px;
+	font-size: 20px;
+	color: #0d207b;
+	padding: 2px;
+}
+
+.CommentButton  {
+	width: 10%;
+	height: 40px;
+	font-size: 21px;
+	background: #7f147b;
+	color: white;
+	border: solid 1px white;
+	border-radius: 3px;
+}
+
+.CommentButton:hover{
+	cursor: pointer;
+	background-color: #af117c;
+}
+
+.Comments	{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	opacity: 1;
+  animation: fade 2s linear;
+	align-items: center;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.User {
+	width: 35px;
+	height: 35px;
+	margin: 10px;
+	border-radius: 50%;
+	background-image: linear-gradient(359.694deg, rgb(218, 0, 113), rgb(27, 0, 197));
+}
+
+.Text {
+	font-size: 17px;
+  font-weight: 600;
+	color: darkblue;
+}
