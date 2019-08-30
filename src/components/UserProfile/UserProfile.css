@@ -1,0 +1,45 @@
+.UserProfileContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.ImageContainer{
+    width: 150px;
+    height: auto;
+}
+
+.Img{
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%;
+    border: solid 1px midnightblue;
+    background-size: cover;
+    margin: 0 auto;
+
+}
+
+.InfoContainer{
+    width: 50%;
+    
+}
+
+
+.Name{
+    font-size: 46px;
+    text-align: center;
+    padding: 26px;
+    color: #ae117c;
+}
+
+.LikesNumber{
+    font-size: 30px;
+    color: #0d207b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.CommentsNumbers{
+    font-size: 30px;
+    color: #0d207b;
+}

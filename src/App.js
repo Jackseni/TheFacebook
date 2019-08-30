@@ -2,7 +2,6 @@ import React,  {Component} from 'react';
 import UserProfile from './components/UserProfile/UserProfile';
 import Heart from './components/Heart/Heart';
 import Comments from './components/Comments/Comments'
-import { tsParenthesizedType } from '@babel/types';
 import './App.css';
 
 class App extends Component{
@@ -22,7 +21,7 @@ clickHeart = () => {
 }
 
 addComment = (newValue) => {
-  const Comments = this.state.CommentsNumber
+  const comments = this.state.CommentsNumber
   const arrayComments = this.state.Comments
   const newComment ={
     value: newValue
@@ -30,7 +29,7 @@ addComment = (newValue) => {
 
   arrayComments.push(newComment)
   this.setState({ CommentsNumber: comments + 1})
-  this.setState({ Comments: array })
+  this.setState({ Comments: arrayComments })
   this.setState({ ValueText: '' })
 
   }
@@ -44,8 +43,8 @@ addComment = (newValue) => {
   render(){
     return ( <div className = "Container" >
       <UserProfile img = 'https://pbs.twimg.com/profile_images/836333218924277760/iVzLr4c-.jpg'
-        Name = 'Monoku'
-        Likes = { the.state.LikesNumber}
+        Name = 'JACKSENI'
+        Likes = { this.state.LikesNumber}
         Comments = { this.state.CommentsNumber}/>
         <Heart clickHeart = { this.clickHeart } />
         <Comments comments = { this.state.Comments }

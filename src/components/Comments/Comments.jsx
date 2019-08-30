@@ -1,7 +1,6 @@
 import React from 'react';
-import ProType from 'pro-types';
+import PropTypes from 'prop-types';
 import './Comments.css';
-import { className } from 'postcss-selector-parser';
 
 const Comments = ({ comments , addComments, changeText , valueText }) => {
     const handleChange = (event) => {
@@ -9,7 +8,7 @@ const Comments = ({ comments , addComments, changeText , valueText }) => {
     }
 
 
-    const hadleClick = ()=>{
+    const handleClick = ()=>{
         addComments(valueText)
     }
 
@@ -23,5 +22,33 @@ const Comments = ({ comments , addComments, changeText , valueText }) => {
     });
 
 
+    return(
+        <div className='CommentsContainerBox'>
+            <div className='CommentsContainer'>
+                <input
+                onChange={(e)=> handleChange(e)}
+                className = 'CommentsBox'
+                type = 'text' placeholder='Escriba un comentario'
+                value={valueText}
+                ></input>
+                <button className='CommentButton' onClick={() => handleClick()}></button>
+            </div>
+            {CommentList}
+        </div>
+    )
 
 }
+
+Comment.defaultProps={
+    valueInput:''
+
+}
+
+Comments.propTypes={
+    addComment: PropTypes.func.isRequired,
+    comments: PropTypes.array.isRequired,
+    changeText: PropTypes.func.isRequired
+}
+
+
+export default Comments;
